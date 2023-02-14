@@ -1,0 +1,32 @@
+<p>
+  <mat-toolbar color="primary">
+   <button mat-icon-button class="icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>MONA</span>
+  <span class="example-spacer"></span>  
+  <button mat-icon-button class= "search-icon" aria-label="Example icon-button with search icon">
+    <mat-icon>search</mat-icon>
+  </button>
+  <button mat-icon-button class="shopping-Cart-icon" aria-label="Example icon-button with shoppingCart-icon">   
+   <mat-icon>shopping-Cart-icon</mat-icon>
+ </button>
+</mat-toolbar>
+</p>
+
+
+<div class="one-container">
+  <mat-card class="image" *ngFor="let sale of BanHang">
+      <img mat-card-image [src]="sale.image" >
+      <mat-card-header>
+          <mat-card-title class="name">{{sale.name}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+       
+        <p>{{ sale.price}}</p>
+        
+        <button>Mua</button> 
+        
+    </mat-card-content>
+  </mat-card>
+</div>
